@@ -1,0 +1,27 @@
+.swiper {
+  width: 100%;
+  padding-top: 50px  !important;
+  padding-bottom: 50px   !important; 
+ 
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  /* width: 400px  !important;
+  height: 400px  !important; */
+  border-radius: 9px;
+}
+
+.swiper-slide .images {
+  display: block;
+ 
+  border: 2px #BF8C4D solid;
+  border-radius: 9px;
+}
+
+  .tab-shadow{
+    box-shadow: #BF8C4D 0px 4px 8px;
+  }
+  
+  

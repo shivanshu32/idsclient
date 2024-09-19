@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.primefont {
+  font-family: "Lato", sans-serif;
+}
+
+.glass {
+  backdrop-filter: blur(2px) saturate(2%);
+  -webkit-backdrop-filter: blur(2px) saturate(2%);
+  background-image: linear-gradient(60deg, #ffffff38, #9079bc27, #ffffff2a);
+  border-radius: 25px;
+
+}
+
+.glass2 {
+  backdrop-filter: blur(2px) saturate(2%);
+  -webkit-backdrop-filter: blur(2px) saturate(2%);
+  background-image: linear-gradient(60deg, #ffffff25, #9079bc27, #ffffff2a);
+  border-radius: 25px;
+
+
+}
+
+
+.gradient {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.3),
+      rgba(32, 31, 33, 0.2),
+      rgba(255, 255, 255, 0.2));
+  /* For webkit (Safari, Chrome) */
+  background: -webkit-linear-gradient(left,
+      rgba(255, 255, 255, 0.3),
+      rgba(32, 31, 33, 0.2),
+      rgba(255, 255, 255, 0.2));
+  /* For Mozilla Firefox */
+  background: -moz-linear-gradient(left,
+      rgba(255, 255, 255, 0.3),
+      rgba(32, 31, 33, 0.2),
+      rgba(255, 255, 255, 0.2));
+  /* For Opera */
+  background: -o-linear-gradient(left,
+      rgba(255, 255, 255, 0.3),
+      rgba(32, 31, 33, 0.2),
+      rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(4px);
+}
+
+
+.active {
+  color: black;
+  background-color: #BF8C4D;
+  padding: 2px 2px 2px 12px;
+
+
+}
+
+.act:hover {
+  color: black;
+  background-color: #BF8C4D;
+
+
+}
+
+.bgimg {
+  background-image: url(./assets/home/about.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(80%);
+}
+
+.banner-text {
+  color: transparent;
+
+  -webkit-text-stroke: 2px white;
+
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.animate {
+  transition: ease-in-out 0.9s;
+}
+
+.brightness {
+  filter: brightness(39%);
+}
+
+.vid-brightness {
+  filter: brightness(60%);
+}
+
+
+
+.hide {
+
+
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.hide:hover {
+  opacity: 1;
+}
+
+.animate {
+  transition: all ease 0.9s;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("./assets/home/parallax.jpg");
+
+
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.cardHover {
+  background: linear-gradient(to bottom,
+      rgba(24, 22, 1, 0.95),
+      #BF8C4D);
+}
+
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  perspective: 1000px;
+  /* Set perspective */
+}
+
+.card .content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.card:hover .content {
+  transform: rotateY(10deg);
+  /* Tilt effect on hover */
+}
+
+
+
+@media (max-width: 767px) {
+  .parallax {
+    filter: brightness(90%); 
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .parallax {
+    filter: brightness(130%); 
+  }
+}

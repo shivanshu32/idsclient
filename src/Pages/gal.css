@@ -1,0 +1,22 @@
+/* gallery slider */
+
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* width: 100% !important;
+    height: 100% !important; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide .imgs {
+    display: block;
+   object-fit: cover;
+    object-fit: cover;
+    filter: brightness(65%);
+  }
+  
