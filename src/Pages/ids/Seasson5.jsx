@@ -46,28 +46,8 @@ const Seasson5 = () => {
                         </div> */}
                         <h2 className="text-gray-800 dark:text-gray-100 mt-4  tracking-normal text-xl lg:text-2xl font-bold">First Show - 3:00pm to 3:30pm</h2>
                         <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p> <br />
-                        <p className="mb-6 font-normal text-gray-600 dark:text-gray-400 text-sm tracking-normal w-11/12 lg:w-9/12">
-                        Unlock the ultimate VIP experience at the India Designer Show! <br /><br />With your exclusive pass, enjoy premium access to: <br /> 
 
-✨ Front-row seats <br />
-✨ Meet & greet with fashion icons and influencers <br />
-✨ Complimentary refreshments in the VIP lounge <br /> <br />
-
-Don’t miss out on this once-in-a-lifetime opportunity! <br /> <br />
-Get your pass now and step into the world of high fashion!
-                        </p>
-
-                        <div className=" py-5">
-                            <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
-                            <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p> 
-                            
-                            <p className="text-xl font-semibold leading-tight text-indigo-700 dark:text-gray-100 pt-6 pt-3">₹ 600</p>
-                            <div className="pt-4">
-                                <button className="py-2 px-4 text-xs font-semibold leading-3 bg-indigo-700 rounded hover:bg-indigo-600 focus:outline-none text-white">Book Now</button>
-                            </div>
-                        </div>
-
-                        <div className="flex lg:items-center items-start flex-col lg:flex-row">
+                        <div className="flex lg:items-center items-start flex-col lg:flex-row pb-8">
                             <div className="flex items-center">
                                 <div className="border-2 border-white dark:border-gray-700 shadow rounded-full w-6 h-6">
                                     <img className="w-full h-full overflow-hidden object-cover rounded-full" src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card8.jpg" alt="avatar" />
@@ -84,7 +64,7 @@ Get your pass now and step into the world of high fashion!
                                 <div className="-ml-2 border-2 border-white dark:border-gray-700 shadow rounded-full w-6 h-6">
                                     <img className="w-full h-full overflow-hidden object-cover rounded-full" src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card12.jpg" alt="avatar" />
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-400 text-xs font-normal ml-1">+12 Attendees</p>
+                                <p className="text-gray-600 dark:text-gray-400 text-xs font-normal ml-1">500+ Attendees</p>
                             </div>
                             <div className="mt-4 lg:mt-0 ml-0 lg:ml-12 flex items-end">
                                 <span className="mr-1 text-gray-600 dark:text-gray-400">
@@ -97,41 +77,68 @@ Get your pass now and step into the world of high fashion!
                                 <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal text-center">Major Dhyan Chand Stadium</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="px-5 lg:px-5 md:px-10 py-3 lg:py-4 flex flex-row items-center justify-between border-t border-gray-300">
-                        <div className="flex items-center">
-                            <div className="flex items-center">
-                                <div className="bg-white rounded-full w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
-                                    <input defaultChecked type="radio" name="radio" className="checkbox appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none" />
-                                    <div className="check-icon hidden border-4 border-black dark:border-gray-700 rounded-full w-full h-full z-1" />
-                                </div>
-                                <p className="ml-3 text-base leading-4 font-normal text-gray-800 dark:text-gray-100">Going</p>
-                            </div>
-                            <div className="flex items-center ml-6">
-                                <div className="bg-white rounded-full w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
-                                    <input type="radio" name="radio" className="checkbox appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none" />
-                                    <div className="check-icon hidden border-4 border-black dark:border-gray-700 rounded-full w-full h-full z-1" />
-                                </div>
-                                <p className="ml-3 text-base leading-4 font-normal text-gray-800 dark:text-gray-100">Not Going</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center">
-                            <div className="text-gray-600 dark:text-gray-400 hover:text-gray-700 cursor-pointer mr-4">
-                                <svg className="feather feather-bookmark" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                                </svg>
-                            </div>
-                            <div className="text-indigo-700 dark:text-indigo-600 hover:text-indigo-600 cursor-pointer">
-                                <svg className="feather feather-share-2" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx={18} cy={5} r={3} />
-                                    <circle cx={6} cy={12} r={3} />
-                                    <circle cx={18} cy={19} r={3} />
-                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
-                                </svg>
+
+                        <p className="mb-6 font-normal text-gray-600 dark:text-gray-400 text-sm tracking-normal w-11/12 lg:w-9/12">
+                        Unlock the ultimate experience at the India Designer Show! <br /><br />With your exclusive pass: <br /> 
+
+✨ Enjoy premium access to Show Area <br />
+✨ Terms & Conditions Applicable 
+
+{/* Don’t miss out on this once-in-a-lifetime opportunity! <br /> <br />
+Get your pass now and step into the world of high fashion! */}
+                        </p>
+
+                        <div className=" py-2">
+                            {/* <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
+                            <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p>  */}
+
+
+
+                            
+
+                            {/* test starts */}
+                            <div className="md:flex items-center justify-between">
+                        <div className="flex ">
+                            <div className="flex-col items-center ">
+                            <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
+                            <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p> 
+
+                                
                             </div>
                         </div>
+
+                        <div className="flex items-center xl:mt-0 mt-4">
+                
+                            <button className="bg-gray-700 text-sm text-white ml-3 px-4 py-2 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14" fill="none">
+                                    <circle cx="5.25033" cy="4.08333" r="2.33333" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M1.75 12.25V11.0833C1.75 9.79467 2.79467 8.75 4.08333 8.75H6.41667C7.70533 8.75 8.75 9.79467 8.75 11.0833V12.25" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path
+                                        d="M9.33301 6.04166C9.1259 6.04166 8.95801 6.20956 8.95801 6.41666C8.95801 6.62377 9.1259 6.79166 9.33301 6.79166V6.04166ZM12.833 6.79166C13.0401 6.79166 13.208 6.62377 13.208 6.41666C13.208 6.20956 13.0401 6.04166 12.833 6.04166V6.79166ZM11.458 4.66666C11.458 4.45956 11.2901 4.29166 11.083 4.29166C10.8759 4.29166 10.708 4.45956 10.708 4.66666H11.458ZM10.708 8.16666C10.708 8.37377 10.8759 8.54166 11.083 8.54166C11.2901 8.54166 11.458 8.37377 11.458 8.16666H10.708ZM9.33301 6.79166H12.833V6.04166H9.33301V6.79166ZM10.708 4.66666V8.16666H11.458V4.66666H10.708Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                                <span className="ml-2">Book a Seat</span>
+                            </button>
+                        </div>
                     </div>
+                    <div>
+                        {/* <p className="text-sm leading-7 mt-5 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et quidem faciunt, ut de voluptate ponit, quod summum bonum sit aut rerum et quidem, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et quidem faciunt, ut de voluptate ponit, quod summum bonum sit aut.</p> */}
+                    </div>
+                
+                            {/* test ends */}
+                            
+                            {/* <p className="text-xl font-semibold leading-tight text-indigo-700 dark:text-gray-100 pt-6 pt-3">₹ 600</p>
+                            <div className="pt-4">
+                                <button className="py-2 px-4 text-xs font-semibold leading-3 bg-indigo-700 rounded hover:bg-indigo-600 focus:outline-none text-white">Book Now</button>
+                            </div> */}
+                        </div>
+
+                       
+
+                        
+                    </div>
+                   
                 </div>
                 {/* <div className="relative w-full h-64 lg:h-auto lg:w-1/2 rounded-t lg:rounded-t-none lg:rounded-r inline-block">
                     <img className="w-full h-full absolute inset-0 object-cover rounded-t lg:rounded-r lg:rounded-t-none" src="https://tuk-cdn.s3.amazonaws.com/assets/components/grid_cards/gc_27.png" alt="banner" />
