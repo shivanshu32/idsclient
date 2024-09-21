@@ -79,7 +79,7 @@ const Seasson5 = () => {
                         </div>
 
                         <p className="mb-6 font-normal text-gray-600 dark:text-gray-400 text-sm tracking-normal w-11/12 lg:w-9/12">
-                        Unlock the ultimate experience at the India Designer Show! <br /><br />With your exclusive pass: <br /> 
+                        Unlock the ultimate experience at the India Designer Show! <br /> 
 
 ✨ Enjoy premium access to Show Area <br />
 ✨ Terms & Conditions Applicable 
@@ -88,7 +88,7 @@ const Seasson5 = () => {
 Get your pass now and step into the world of high fashion! */}
                         </p>
 
-                        <div className=" py-2">
+                        <div className="">
                             {/* <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
                             <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p>  */}
 
@@ -100,8 +100,8 @@ Get your pass now and step into the world of high fashion! */}
                             <div className="md:flex items-center justify-between">
                         <div className="flex ">
                             <div className="flex-col items-center ">
-                            <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
-                            <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p> 
+                            {/* <p className="text-base font-medium leading-none text-gray-800 dark:text-gray-100">First Show - 3:00pm to 3:30pm</p>
+                            <p className="text-sm leading-3 text-gray-500 dark:text-gray-400 pt-2">9 November 2024, Saturday</p>  */}
 
                                 
                             </div>
