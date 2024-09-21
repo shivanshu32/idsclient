@@ -13,8 +13,8 @@ const Seasson5 = () => {
      </span>
     <div className="pt-20">
       <p className="text-secondary text-center underline font-Lato text-[28px] font-semibold">INDIA DESIGNER SHOW SEASON 5 </p>
-      <p className="text-white text-3xl text-center pt-3 font-Lato "> <b>Date</b> 8th-9th November 2024</p>
-      <p className="text-white text-2xl text-center pt-3 font-Lato "><b>Venue</b> Major Dhyanchand Stadium India Gate </p>
+      <p className="text-white text-xl text-center pt-3 font-Lato "> <b>Date</b> 8th-9th November 2024</p>
+      <p className="text-white text-xl text-center pt-3 font-Lato "><b>Venue</b> Major Dhyanchand Stadium India Gate </p>
       {/* <span className = "flex   items-center justify-center gap-6 mt-12 ">
       <Link to = "/contact" className="flex justify-center">
             <span className="bg-secondary text-white px-6 py-2 rounded-md ">
