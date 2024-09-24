@@ -161,7 +161,7 @@ Get your pass now and step into the world of high fashion! */}
 
                         <div className="flex items-center xl:mt-0 mt-4">
                 
-                            <button onClick={() => props.onOpen(props.title,props.dateis)} className="bg-gray-700 text-sm text-white ml-3 px-4 py-2 flex items-center">
+                            <button onClick={() => props.onOpen(props.title,props.dateis, props.showprice, props.showid)} className="bg-gray-700 text-sm text-white ml-3 px-4 py-2 flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14" fill="none">
                                     <circle cx="5.25033" cy="4.08333" r="2.33333" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     <path d="M1.75 12.25V11.0833C1.75 9.79467 2.79467 8.75 4.08333 8.75H6.41667C7.70533 8.75 8.75 9.79467 8.75 11.0833V12.25" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDom from 'react-dom';
+import Slider from './slider.jsx'
 
 const onTopStyle = {
   position: 'fixed',
@@ -15,6 +16,50 @@ const onTopStyle = {
 }
 
 export default function CustomModel(props) {
+
+
+  const [firststep, setStep] = useState(true);
+  const [quantity, setQuantity] = useState(1);
+  const[displayshowprice, setShowPrice] = useState(false)
+  //alert(displayshowprice)
+
+  const proceedClick = () => {
+    if(firststep){
+      setStep(false)
+    }
+  }
+
+  const closeClick = () => {
+   // alert('closeCalled')
+    setQuantity(1)
+    setShowPrice(false)
+   props.onClose()
+    
+  }
+
+  const incQuantity = (quantity,showprice) => {
+    const newquantity = quantity + 1
+    const newprice = Number(showprice) * newquantity
+    //alert(newprice)
+    //alert(newquantity)
+    setQuantity(newquantity)
+    setShowPrice(newprice)
+
+  }
+
+  const decQuantity = (quantity,showprice) => {
+    if(quantity != 1)
+    {
+      const newquantity =   quantity - 1
+      const newprice = Number(showprice) * newquantity
+      //alert(newprice)
+      //  alert(newquantity)
+      setQuantity(quantity-1)
+      setShowPrice(newprice)
+
+    }
+    
+  }
   
   //alert(JSON.stringify(open))
   
@@ -30,7 +75,7 @@ export default function CustomModel(props) {
             <div className="md:flex block justify-center">
               <div className="bg-white flex justify-end items-center h-[50px] px-4 w-full md:hidden block">
                 <svg
-                  onClick={props.onClose}
+                  onClick={closeClick}
                   className="md:hidden block cursor-pointer z-10"
                   width={24}
                   height={24}
@@ -56,7 +101,7 @@ export default function CustomModel(props) {
               </div>
               <div className="lg:max-w-[373px] md:max-w-[696px] w-full bg-white lg:px-8 md:px-4 px-4 pt-5 md:pb-6 pb-4 relative">
                 <svg
-                  onClick={props.onClose}
+                  onClick={closeClick}
                   className="md:block hidden cursor-pointer right-4 top-4 absolute"
                   width={24}
                   height={24}
@@ -71,14 +116,20 @@ export default function CustomModel(props) {
                     fill="#1F2937"
                   />
                 </svg>
-                <p className="text-2xl text-gray-800 font-semibold text-center pt-16">
+                
+               
+                {/* first step starts*/}
+                
+                <div  className={`${
+            firststep ? "pt-2" : "hidden"} `}>
+              <p className="text-2xl text-gray-800 font-semibold text-center pt-16">
                   Event Passes for IDS5
         
                 </p>
-                <p className="text-center text-gray-600 pt-4">
+               <p className="text-center text-gray-600 pt-4">
                   Please Provide Accurate Information
                 </p>
-                <div className="text-center pt-8 w-full">
+<div className="text-center pt-8 w-full">
                   <input
                     type="text"
                     name
@@ -114,17 +165,113 @@ export default function CustomModel(props) {
                     className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3"
                   />
                 </div>
+
                 <div className="text-center pt-4 w-full">
-                  <button className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200 md:mt-0 mt-4">
+                  <button onClick={proceedClick} className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200 md:mt-0 mt-4">
                     Proceed
                   </button>
                 </div>
-                {/* <p className="text-center text-gray-800 pt-6 font-medium text-lg hover:border-b border-gray-800 w-[95px] h-[50px] mx-auto decoration-gray-800 cursor-pointer">
-                  No, Thanks
+
+            </div>
+            
+            {/* first step ends */}
+
+            {/* second step starts */}
+            <div  className={`${
+            firststep ? "hidden" : "pt-2"} `}>
+            {/* <p className=" text-gray-600 pt-4">
+                 How Many Passes You Need?
                 </p> */}
-                <p className="text-gray-600 text-center lg:pt-12 md:pt-10 pt-12">
-                  I Agree for Contributing towards IDS5
+                {/* <Slider /> */}
+
+                <div class="hidden  lg:block md:block  md:px-6">
+            <div class="flex justify-between">
+               
+
+               
+                <p class="text-xl font-medium ml-0 leading-tight text-gray-600 ">Quantity</p>
+              
+                <p class="text-xl font-medium leading-tight text-gray-600 lg:text-xl">Total</p>
+            </div>
+        </div>
+        <hr class="hidden mt-6 mb-6 border-gray-300 lg:block md:block h-0.5" />
+
+
+        <div class="flex justify-between">
+
+                {/* counter button starts */}
+                <div
+                                class="flex items-center justify-center w-20 h-10 p-3 space-x-3 border border-gray-300 ">
+                                <button class="outline-none" onClick={() => decQuantity(quantity,props.showprice)}
+                                    aria-label="decrease quantity"
+                                    className="text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 hover:bg-gray-100">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.625 1.5L3.375 6L8.625 10.5L8.625 1.5Z" fill="#1F2937" />
+                                    </svg>
+
+                                </button>
+                                <p className="text-base text-gray-800 quantity1 ">{quantity}</p>
+                                <button  onClick={() => incQuantity(quantity,props.showprice)}
+                                    aria-label="increase quantity"
+                                    className="text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 hover:bg-gray-100">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.375 10.5L8.625 6L3.375 1.5L3.375 10.5Z" fill="#1F2937" />
+                                    </svg>
+                                </button>
+
+                            </div>
+                {/* counter button ends */}
+                {/* amount starts */}
+                <div
+
+          className={`${
+            displayshowprice ? "hidden" : "flex" }`}>
+                <p class="text-xl font-medium leading-tight text-gray-600 lg:text-xl">₹ {props.showprice}</p>
+                </div>
+
+                <div
+
+className={`${
+  displayshowprice ? "flex" : "hidden" }`}>
+      <p class="text-xl font-medium leading-tight text-gray-600 lg:text-xl">₹ {displayshowprice}</p>
+      </div>
+                {/* amount ends */}
+                </div>
+
+                <div className="text-center pt-4 w-full">
+                  <button onClick={proceedClick} className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200 md:mt-0 mt-4">
+                    Checkout
+                  </button>
+                </div>
+
+                <div class="py-4 flex items-center">
+                    <div class="bg-white dark:bg-gray-800 border rounded-sm border-gray-400 dark:border-gray-700 w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
+                        <input aria-labelledby="agree"  checked type="checkbox" class="focus:outline-none focus:ring-2 focus:ring-gray-700 checkbox focus:opacity-100 opacity-0 absolute cursor-pointer w-full h-full" />
+                        <div class="check-icon hidden bg-blue-500 text-white rounded-sm">
+                           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/form_layout-svg1.svg" alt="check-icon" />
+                        </div>
+                    </div>
+                    <p id="agree" tabindex="0" class="focus:outline-none text-sm leading-none ml-2">I agree with contribution towards IDS5. </p>
+                </div>
+
+              </div>
+            {/* second step ends */}
+                
+               
+            <div  className={`${
+            firststep ? "hidden" : "pt-0"} flex justify-center`}>
+                <button onClick={()=> setStep(true)}>
+                <p className="text-center text-gray-800 pt-6 font-medium text-lg hover:border-b border-gray-800 w-[95px] h-[50px] mx-auto decoration-gray-800 cursor-pointer">
+                  Back
                 </p>
+                </button>
+            </div>
+
+               
+
+               
               </div>
             </div>
           </div>
