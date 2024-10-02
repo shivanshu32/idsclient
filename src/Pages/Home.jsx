@@ -115,11 +115,11 @@ const Home = () => {
               See More...
             </span>
           </Link>
-          <h1 className="font-semibold text-[30px] primefont text-secondary underline text-center mt-16">
+          {/* <h1 className="font-semibold text-[30px] primefont text-secondary underline text-center mt-16">
             {" "}
             Instagram Feeds
-          </h1>
-          <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/25448018' frameborder='0' width='100%' height='1000'></iframe>
+          </h1> */}
+          {/* <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/25448018' frameborder='0' width='100%' height='1000'></iframe> */}
        {/* <iframe src="//lightwidget.com/widgets/34a70d300d1155c28ef3cc7d974bb79e.html"  allowtransparency="true" class="lightwidget-widget" width='100%' height='1000' className="scrollbar-hide overflow-hidden mt-8 md:mx-6 mx-3 sm:mx-6" ></iframe> */}
           {/* <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center mt-9 gap-7 md:mx-12 mx-4 ">
             {instaData.map((data) => (
