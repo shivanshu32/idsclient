@@ -5,6 +5,7 @@ import seVidfour from "./seVidfour.mp4";
 import seFourdesk from "./seFourdesk.mp4";
 import seFivedesk from "./seFivedesk.mp4";
 
+
 import seoneMo from "./seoneMo.mp4";
 import sefivemo from "./sefivemo.mp4";
 
@@ -15,6 +16,7 @@ import sefourMo from "./sefourMo.mp4";
 import genx1 from "./Genx1.mp4";
 import error from "./Error.png";
 import logo from "./logo.png";
+import passback from "./passback.jpeg"
 import curve from "./curve.png";
 import check from "./check.png";
 import brandp from "./brandp.webp";
@@ -57,5 +59,6 @@ export {
   seVidfour,
   genxonem,
   setwoMo,
-  lokesh
+  lokesh,
+  passback
 };

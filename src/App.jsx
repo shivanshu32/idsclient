@@ -23,6 +23,8 @@ import Seasson5 from "./Pages/ids/Seasson5";
 import RefundPolicy from "./components/RefundPolicy";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
+import PaymentStatus from "./Pages/PaymentStatus";
+import EPass from "./Pages/EPass";
 function App() {
 
   return (
@@ -52,6 +54,8 @@ function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
 
           <Route path="/registration-successfull" element={<Thankyou />} />
+          <Route path="/paymentstatus/:status/:merchanttxnid" element={<PaymentStatus />} />
+          <Route path="/epass/:txnid" element={<EPass />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

@@ -79,7 +79,7 @@ const Nav = () => {
                           path === "/ids/season1" && "active"
                         }`}
                       >
-                        season 1
+                        Season 1
                       </li>
                     </Link>
                     <Link to="/ids/season2">
@@ -89,7 +89,7 @@ const Nav = () => {
                           path === "/ids/season2" && "active"
                         }`}
                       >
-                        season 2
+                        Season 2
                       </li>
                     </Link>
                     <Link to="/ids/season3">
@@ -99,7 +99,7 @@ const Nav = () => {
                           path === "/ids/season3" && "active"
                         }`}
                       >
-                        season 3
+                        Season 3
                       </li>
                     </Link>
                     <Link to="/ids/season4">
@@ -109,7 +109,7 @@ const Nav = () => {
                           path === "/ids/season4" && "active"
                         }`}
                       >
-                        Session 4
+                        Season 4
                       </li>
                     </Link>
                     <Link to="/ids/season5">
@@ -119,7 +119,7 @@ const Nav = () => {
                           path === "/ids/season5" && "active"
                         }`}
                       >
-                        Session 5
+                        Season 5
                       </li>
                     </Link>
                   </li>
@@ -151,7 +151,7 @@ const Nav = () => {
                           path === "/idsgenX/season1" && "active"
                         }`}
                       >
-                        season 1
+                        Season 1
                       </li>
                     </Link>
                   </li>

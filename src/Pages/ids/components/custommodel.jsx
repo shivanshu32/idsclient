@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import ReactDom from 'react-dom';
-import Slider from './slider.jsx'
+import { Field, Form, Formik } from 'formik'
+import * as Yup from 'yup'
+import apiurl from "../../../util";
+import { toast } from "react-toastify";
 
 const onTopStyle = {
   position: 'fixed',
@@ -17,19 +19,84 @@ const onTopStyle = {
 
 export default function CustomModel(props) {
 
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   occupation: "",
+  //   showid: ""
+  // });
+
+  // const changeHandler = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required('Name Required'),
+  email: Yup.string().email('Invalid email').required('Email Required'),
+  phone: Yup.string().required('Please enter your phone number'),
+  occupation: Yup.string().required('Please enter your occupation'),
+})
+
 
   const [firststep, setStep] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [merchanttxnid, setMerchanttxnid] = useState(1);
   const[displayshowprice, setShowPrice] = useState(false)
   //alert(displayshowprice)
 
-  const proceedClick = () => {
+  const proceedClick = async() => {
     if(firststep){
       setStep(false)
+    }
+    else {
+      const finalprice = quantity * props.showprice
+      const finalmerchanttxnid = merchanttxnid
+
+      const data = {
+        totalprice: finalprice * 100,
+        merchanttxnid: finalmerchanttxnid,
+        quantity: quantity,
+        showid: props.showid,
+        cost: props.showprice
+
+      }
+      //alert(finalprice)
+      //alert(finalmerchanttxnid)
+      try {
+        const response = await apiurl.post("/paynow", data);
+        //alert(JSON.stringify(response.data.data.instrumentResponse.redirectInfo.url))
+
+        const redirectURL = response.data.data.instrumentResponse.redirectInfo.url
+        //alert(redirectURL)
+
+        window.location.href = redirectURL;
+        
+        //navigate(redirectURL);
+
+       
+
+        //alert(response.data.message)
+        //toast.success(response.data.message || "Registration successful!");
+        //navigate("/registration-successfull");
+      } catch (error) {
+        console.error("Failed to proceed:", error);
+        toast.error(
+          error.response?.data?.message ||
+            "Failed to Proceed. Please try again later."
+        );
+      }
+
+      
     }
   }
 
   const closeClick = () => {
+    setStep(true)
    // alert('closeCalled')
     setQuantity(1)
     setShowPrice(false)
@@ -122,14 +189,88 @@ export default function CustomModel(props) {
                 
                 <div  className={`${
             firststep ? "pt-2" : "hidden"} `}>
-              <p className="text-2xl text-gray-800 font-semibold text-center pt-16">
+              <p className="text-2xl text-gray-800 font-semibold text-center pt-4 pb-8">
                   Event Passes for IDS5
         
                 </p>
-               <p className="text-center text-gray-600 pt-4">
+               {/* <p className="text-center text-gray-600 pt-4">
                   Please Provide Accurate Information
-                </p>
-<div className="text-center pt-8 w-full">
+              </p> */}
+
+{/* formik starts */}
+<Formik
+       initialValues={{
+         name: '',
+         phone: '',
+         email: '',
+         occupation: ''
+       }}
+       validationSchema={validationSchema}
+       onSubmit= {async(values, { resetForm, setSubmitting }) => {
+        values.showid = props.showid
+        values.quantity = quantity
+        values.price = props.showprice
+        proceedClick()
+
+
+        try {
+          const response = await apiurl.post("/ids/register/pass", values);
+          setMerchanttxnid(response.data.message)
+
+         
+
+          //alert(response.data.message)
+          //toast.success(response.data.message || "Registration successful!");
+          //navigate("/registration-successfull");
+        } catch (error) {
+          console.error("Failed to proceed:", error);
+          toast.error(
+            error.response?.data?.message ||
+              "Failed to Proceed. Please try again later."
+          );
+        }
+
+
+
+       //alert("submitted")
+       //alert(JSON.stringify(values))
+       resetForm();
+         // same shape as initial values
+         //console.log(values);
+       }}
+     >
+       {({ errors, touched }) => (
+         <Form>
+           <Field name="name" placeholder="Name" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" />
+           {errors.name && touched.name ? (
+             <div className="text-red-600 text-sm">{errors.name}</div>
+           ) : null}
+
+          <div className=" pt-2 w-full">
+           <Field name="phone" type="number" placeholder="Mobile" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" />
+           {errors.phone && touched.phone ? (
+             <div className="text-red-600 text-sm">{errors.phone}</div>
+           ) : null}
+           </div>
+
+           <div className=" pt-2 w-full">
+           <Field name="email" placeholder="Email" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" type="email" />
+           {errors.email && touched.email ? <div className="text-red-600 text-sm">{errors.email}</div> : null}
+           </div>
+
+           <div className="pt-2 w-full">
+           <Field name="occupation" placeholder="Occupation" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" type="text" />
+           {errors.occupation && touched.occupation ? <div className="text-red-600 text-sm">{errors.occupation}</div> : null}
+           </div>
+
+           <button type="submit" className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200  mt-4">Submit</button>
+         </Form>
+       )}
+     </Formik>
+{/* formik ends */}
+
+
+{/* <div className="text-center pt-8 w-full">
                   <input
                     type="text"
                     name
@@ -137,8 +278,8 @@ export default function CustomModel(props) {
                     placeholder="Name"
                     className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3"
                   />
-                </div>
-                <div className="text-center pt-2 w-full">
+                </div> */}
+                {/* <div className="text-center pt-2 w-full">
                   <input
                     type="number"
                     name
@@ -146,8 +287,8 @@ export default function CustomModel(props) {
                     placeholder="Mobile No."
                     className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3"
                   />
-                </div>
-                <div className="text-center pt-2 w-full">
+                </div> */}
+                {/* <div className="text-center pt-2 w-full">
                   <input
                     type="Email"
                     name
@@ -155,8 +296,8 @@ export default function CustomModel(props) {
                     placeholder="Email"
                     className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3"
                   />
-                </div>
-                <div className="text-center pt-2 w-full">
+                </div> */}
+                {/* <div className="text-center pt-2 w-full">
                   <input
                     type="text"
                     name
@@ -164,13 +305,13 @@ export default function CustomModel(props) {
                     placeholder="Occupation"
                     className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3"
                   />
-                </div>
+                </div> */}
 
-                <div className="text-center pt-4 w-full">
+                {/* <div className="text-center pt-4 w-full">
                   <button onClick={proceedClick} className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200 md:mt-0 mt-4">
                     Proceed
                   </button>
-                </div>
+                </div> */}
 
             </div>
             
@@ -242,7 +383,7 @@ className={`${
 
                 <div className="text-center pt-4 w-full">
                   <button onClick={proceedClick} className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200 md:mt-0 mt-4">
-                    Checkout
+                    Proceed to Pay
                   </button>
                 </div>
 
