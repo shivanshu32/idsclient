@@ -159,11 +159,11 @@ const Home = () => {
               </Link>
             ))}
           </div> */}
-          <Link to = "https://www.instagram.com/indiadesignershow/?hl=en" className="flex justify-center mt-12">
+          {/* <Link to = "https://www.instagram.com/indiadesignershow/?hl=en" className="flex justify-center mt-12">
             <span className="bg-secondary text-white px-6 py-2 rounded-md ">
               See More...
             </span>
-          </Link>
+          </Link> */}
           {/* <h1 className="font-semibold text-[30px] text-secondary underline text-center mt-16">
             {" "}
             Associate Brand Partners
