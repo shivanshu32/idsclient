@@ -6,6 +6,7 @@ import { homedeskfour, homem, hometab, logo, lokesh, seFourdesk } from "../asset
 import Crousel from "../components/Layout/Crousel";
 import { instaData, ytSrc } from "./Data.js/Img";
 import apiurl from "../util";
+import Ids5cta from "./ids/components/ids5cta"
 
 import { Link } from "react-router-dom";
 import VideoComponent from "./../components/Components";
@@ -50,6 +51,10 @@ const Home = () => {
           <VideoComponent deskvid={homedeskfour} mobvid={homem} tabvid={hometab} />
          
         </span>
+        <div className="w-full">
+
+        <Ids5cta /> 
+        </div>
         <span>
           <span className="text-white md:text-center sm:text-center text-start ">
             <h1 className="font-semibold text-secondary underline primefont text-[30px] text-center mt-16 mb-9">

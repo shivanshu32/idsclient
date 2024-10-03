@@ -29,6 +29,9 @@ import sethreevidtab from "./sethreevidtab.mp4"
 import sefourvidtab from "./sefourvidtab.mp4"
 import sefivevidtab from "./sefivevidtab.mp4"
 import genOneVidmob from "./genOneVidmob.mp4"
+import Sehnaaz from "./home/105.png"
+
+import Sonakshipic from "./home/feed6.jpg"
 
 import lokesh from "./lokesh.jpg"
 export {
@@ -60,5 +63,7 @@ export {
   genxonem,
   setwoMo,
   lokesh,
-  passback
+  passback,
+  Sonakshipic,
+  Sehnaaz
 };
