@@ -158,7 +158,7 @@ const validationSchema = Yup.object().shape({
                   />
                 </svg>
               </div>
-              <div className="bg-gray-800 text-white text-center flex flex-col justify-center items-center lg:px-[20px] md:px-[50px] lg:max-w-[405px] max-w-[343px] w-full md:py-0 py-32">
+              <div className="bg-gray-800 text-white text-center flex flex-col justify-center items-center lg:px-[20px] md:px-[50px] lg:max-w-[405px] max-w-[343px] w-full sm:py-4 md:py-0 md:py-32">
               <p className="lg:text-3xl md:text-3xl text-3xl pb-4 font-semibold">
                   Secure Your Spot
                 </p>
