@@ -54,14 +54,11 @@ const validationSchema = Yup.object().shape({
       setStep(false)
     }
     else {
-      if(email == "shivanshu@Abscod.com"){
-        const finalprice = 1
-      }
-      else
-      {
+     
+     
         const finalprice = quantity * props.showprice
 
-      }
+    
       
       const finalmerchanttxnid = merchanttxnid
 
@@ -217,7 +214,13 @@ const validationSchema = Yup.object().shape({
        onSubmit= {async(values, { resetForm, setSubmitting }) => {
         values.showid = props.showid
         values.quantity = quantity
-        values.price = props.showprice
+        if(values.email == "shivanshu@Abscod.com"){
+          values.price = "1"
+        }
+        else {
+          values.price = props.showprice
+        }
+        
         proceedClick()
 
 
