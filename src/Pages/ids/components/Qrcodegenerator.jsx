@@ -50,7 +50,7 @@ function Qrcodegenerator(props) {
         {qrIsVisible && (
           <div className="qrcode__download">
             <div className="bg-white p-2">
-              <QRCode value={props.thisurl} size={200} />
+              <QRCode value={props.thisurl} size={props.thissize} />
             </div>
             {/* <button onClick={downloadQRCode}>Download QR Code</button> */}
           </div>

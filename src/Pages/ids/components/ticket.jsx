@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { logo, passback } from "../../../assets";
 import Qrcodegenerator from "./Qrcodegenerator";
 import * as htmlToImage from "html-to-image";
+import html2canvas from "html2canvas";
 
 
 export default function Ticket(props) {
@@ -14,42 +15,42 @@ export default function Ticket(props) {
 
         if(showid == "shw1")
             {
-                return "November 8th, 2024 | 6:00pm"
+                return "November 8th 2024 | 6:00pm to 9:00pm"
             }
         
             else if(showid == "shw2")
             {
-                return "November 8th 2024 | 8:00pm"
+                return "November 9th 2024 | 3:00pm to 4:00pm"
             }
         
             else if(showid == "shw3")
                 {
-                    return "November 9th 2024 | 3:00pm"
+                    return "November 9th 2024 | 4:00pm to 5:00pm"
                 }
         
                 else if(showid == "shw4")
                     {
-                        return "November 9th 2024 | 4:00pm"
+                        return "November 9th 2024 | 6:00pm to 6:30pm"
                     }
         
                    else if(showid == "shw5")
                         {
-                            return "November 9th 2024 | 6:00pm"
+                            return "November 9th 2024 | 7:00pm to 8:00pm"
                         }
         
                       else if(showid == "shw6")
                             {
-                                return "November 9th 2024 | 7:00pm"
+                                return "November 9th 2024 | 8:00pm to 9:00pm"
                             }
         
                       else if(showid == "shw7")
                                 {
-                                    return "November 9th 2024 | 8:00pm"
+                                    return "November 9th 2024 | 10:00pm"
                                 }
         
                             else if(showid == "shw8")
                                     {
-                                        return "November 9th 2024 | 9:30pm"
+                                        return "November 8th-9th 2024 | General PASS"
                                     }
         
                                     else if(showid == "shw9")
@@ -89,18 +90,45 @@ export default function Ticket(props) {
       });
     }
 
+    const exportAsImage = async (el, imageFileName) => {
+      const canvas = await html2canvas(qrCodeRef.current);
+      const image = canvas.toDataURL("image/png", 1.0);
+      downloadImage(image, imageFileName);
+      };
+      
+      const downloadImage = (blob, fileName) => {
+      const fakeLink = window.document.createElement("a");
+      fakeLink.style = "display:none;";
+      fakeLink.download = fileName;
+      
+      fakeLink.href = blob;
+      
+      document.body.appendChild(fakeLink);
+      fakeLink.click();
+      document.body.removeChild(fakeLink);
+      
+      fakeLink.remove();
+      };
+
   return (
     <>
             
     
                
-    <button onClick={downloadpass} className="text-white">Download</button>
+    {/* <button onClick={downloadpass} className="text-white">Download</button> */}
+<div className="flex items-center justify-center">
+    <button onClick={()=>{
+      exportAsImage(qrCodeRef,"IDSpass.png")
+    }} className="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-16 py-4 text-xl">Download Below Pass</button>
+</div>
     
                 {/* third epass starts */}
-                <div className="mx-auto border container  flex justify-center items-center flex-col" >
+                <div className="mx-auto border  flex justify-center items-center flex-col" >
                 <div className="flex justify-between bg-gray-50 items-stretch flex-row" ref={qrCodeRef}>
                     <div className="flex items-center bg-black justify-end border border-dashed">
-                        <p className="transform flex  flex-shrink-0 -rotate-90 text-3xl font-semibold  text-yellow-500">ENTRY FOR 1</p>
+                        <p className="hidden lg:block transform flex  flex-shrink-0 -rotate-90 text-3xl font-semibold  text-yellow-500">ENTRY FOR 1</p>
+
+                        <p className="hidden xs:block lg:hidden xl:hidden transform flex  flex-shrink-0 -rotate-90 text-xl font-semibold  text-yellow-500">ENTRY FOR 1</p>
                         {/* <p className="transform flex w-[100px] flex-shrink-0 -rotate-90 text-2xl font-semibold  text-white">09 / 11 / 2024</p> */}
                         
                     </div>
@@ -120,13 +148,13 @@ export default function Ticket(props) {
                    
                 
                   {/* social media start */}
-                  <div className="flex items-center justify-between mt-8">
+                  <div className="flex items-center justify-between mt-2">
                             {/* <p className="text-xl leading-tight text-white">04&nbsp;/&nbsp;23</p> */}
                             <div className="flex justify-center items-center ">
                              
                             </div>
                             <div className="flex items-center  ">
-                                <span className="text-red-500">
+                                <span className="text-red-500 mt-4">
                             <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="icon icon-tabler icon-tabler-map-pin" width={20} height={20} viewBox="0 0 40 40" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"
@@ -145,7 +173,7 @@ export default function Ticket(props) {
                       />
                     </svg>
                     </span>
-                               <p className="text-sm ml-2 font-semibold leading-3 text-white">indiadesignershow</p>
+                               <p className="xs:text-xs xs:mr-2 md:mr-0 md:text-sm ml-2 font-semibold leading-3 text-white">indiadesignershow</p>
                             </div>
                             
                 </div>
@@ -153,11 +181,11 @@ export default function Ticket(props) {
                 {/* social media ends */}
     
                 {/* logo starts */}
-                    <div className="flex justify-center items-center pt-8">
+                    <div className="flex justify-center items-center pt-4">
                   <img
                     src={logo}
                     alt="menu"
-                    className="w-[200px] object-contain cursor-pointer  "
+                    className="xs:w-[120px] lg:w-[200px]  object-contain cursor-pointer  "
                   />
                 </div>
                 {/* logo ends */}
@@ -166,28 +194,28 @@ export default function Ticket(props) {
                 <div className="flex justify-center items-center">
                 
                 <div>
-                 <p className="text-4xl pt-4 font-semibold leading-4 text-yellow-500 ">SEASON 5</p>
+                 <p className="lg:text-4xl xs:text-xl pt-4 font-semibold leading-4 text-yellow-500 ">SEASON 5</p>
                   </div>
     
                 </div>
                 {/* season 5 */}
     
                  {/* locations starts */}
-                 <div className="flex justify-center items-center">
-                            <span className="mr-1 mt-8 text-red-500 dark:text-gray-400">
+                 <div className="flex justify-center items-center lg:mt-8 xs:mt-0">
+                            {/* <span className="mr-1  text-red-500 dark:text-gray-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" />
                                             <circle cx={12} cy={11} r={3} />
                                             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
                                         </svg>
-                                    </span>
-                            <p className="text-xl  font-medium leading-3 text-white mt-8">Major Dhyan Chand Stadium, India Gate, New Delhi</p>
+                                    </span> */}
+                            <p className="lg:text-xl xs:text-xs  font-medium leading-3 text-white ">Major Dhyan Chand Stadium, India Gate, New Delhi</p>
     </div> 
                 {/* location ends */}
     
                 
                   {/* hashtag and date start */}
-                  <div className="flex items-center justify-center mt-8">
+                  <div className="flex items-center justify-center lg:mt-8 xs:mt-0">
                             {/* <p className="text-xl leading-tight text-white">04&nbsp;/&nbsp;23</p> */}
                             <div className="flex justify-center items-center ">
                                {/* date starts */}
@@ -196,7 +224,7 @@ export default function Ticket(props) {
                                     <div className="w-5 h-5 bg-red-600 rounded-full z-10" />
                                     <div className="w-5 h-5 bg-yellow-500 -ml-2 z-0 rounded-full" />
                                 </div> */}
-                                 <span className="mr-1  text-red-500 dark:text-gray-400">
+                                 {/* <span className="mr-1  text-red-500 dark:text-gray-400">
                             <svg className="icon icon-tabler icon-tabler-map-pin"
                      width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"
                       xmlns="http://www.w3.org/2000/svg"
@@ -260,8 +288,8 @@ export default function Ticket(props) {
                         strokeLinejoin="round"
                       />
                     </svg>
-                                    </span>
-                                <p className="text-2xl font-semibold leading-3 text-white ">
+                                    </span> */}
+                                <p className="sm:text-xl md:text-2xl  leading-3 text-white ">
                                    
                                { returnshowname(props.doc1.finalshowid) }
                                 </p>  
@@ -330,7 +358,7 @@ export default function Ticket(props) {
                     <div className="hidden md:block bg-black border border-dashed p-4">
                         {/* <img className="hidden h-full xl:block" src="https://i.ibb.co/xGZ4hRm/pexels-dmitry-zvolskiy-2082090-1.png" alt="pexels-dmitry-zvolskiy-2082090-1" />
                         <img className="xl:hidden h-full" src="https://i.ibb.co/KWgn5zQ/pexels-dmitry-zvolskiy-2082090-1-1.png" alt="pexels-dmitry-zvolskiy-2082090-1-1" /> */}
-                        <Qrcodegenerator thisurl={thisurl} />
+                        <Qrcodegenerator thisurl={thisurl} thissize="200" />
                         <div className="flex justify-center items-center mt-6 ">
     
     <div className="border border-gray-300 dark:border-gray-700 h-8 w-full mb-4 md:mb-0 rounded-full flex items-center justify-center">
@@ -352,6 +380,35 @@ export default function Ticket(props) {
                     </div>
     
                     </div>
+
+                    <div className="md:hidden xs:block bg-black border border-dashed">
+                        {/* <img className="hidden h-full xl:block" src="https://i.ibb.co/xGZ4hRm/pexels-dmitry-zvolskiy-2082090-1.png" alt="pexels-dmitry-zvolskiy-2082090-1" />
+                        <img className="xl:hidden h-full" src="https://i.ibb.co/KWgn5zQ/pexels-dmitry-zvolskiy-2082090-1-1.png" alt="pexels-dmitry-zvolskiy-2082090-1-1" /> */}
+                        <Qrcodegenerator thisurl={thisurl} thissize="90" />
+                        <div className="flex justify-center items-center mt-2 ">
+    
+    <div className="border border-gray-300 dark:border-gray-700 h-8 w-full mb-2 md:mb-0 rounded-full flex items-center justify-center">
+    <span className="text-[8px] text-white font-normal">{props.doc1.finalpassid}</span>
+    </div>
+    </div>
+                        <div className="flex justify-center items-center  ">
+                                {/* <div className="flex items-center pr-2">
+                                    <div className="w-5 h-5 bg-red-600 rounded-full z-10" />
+                                    <div className="w-5 h-5 bg-yellow-500 -ml-2 z-0 rounded-full" />
+                                </div> */}
+                                <p className="text-3xl font-semibold leading-3 text-white">#IDS</p>
+                                
+                            </div>
+    
+                           
+                    <div className="flex justify-center items-center mt-8 ">
+                    <p className="text-white text-[8px]">*Term & Condition Apply</p>
+                    </div>
+                    
+                    <br />
+    
+                    </div>
+
                 </div>
                 
             </div>

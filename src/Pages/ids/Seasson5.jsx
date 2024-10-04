@@ -60,7 +60,7 @@ const Seasson5 = () => {
                 {/* inner starts */}
              
             {/* Card is full width. Use in 12 col grid for best view. */}
-           <Card title="Day 1 | 1st Show | Grand Opening" dateis="8th November 2024 | Friday | 6:00pm to 6:30pm" onOpen={openModel} showid="shw1" showprice="599" />
+           <Card title="Day 1 | All Shows" dateis="8th November 2024 | Friday | 6:00pm to 9:00pm" onOpen={openModel} showid="shw1" showprice="999" />
             {/* Card code block end */}
    
                 {/* inner ends */}
@@ -71,7 +71,7 @@ const Seasson5 = () => {
                 {/* second inner starts  */}
               
             
-              <Card title="Day 1 | 2nd Show | Closing " dateis="8th November 2024 | Friday | 8:00pm to 9:30pm" onOpen={openModel} showid="shw2" showprice="999" />
+              <Card title="Day 2 | 1st Show | Grand Opening " dateis="9th November 2024 | Saturday | 3:00pm to 4:00pm" onOpen={openModel} showid="shw2" showprice="599" />
             
                 {/* second inner ends */}
                 </div>
@@ -81,7 +81,7 @@ const Seasson5 = () => {
                      {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
            
-            <Card title="Day 2 | Grand Opening" dateis="9th November 2024 | Saturday | 3:00pm to 3:30pm" onOpen={openModel} showid="shw3" showprice="599" />
+            <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 4:00pm to 5:00pm" onOpen={openModel} showid="shw3" showprice="599" />
             {/* Card code block end */}
                 </div>
 
@@ -91,7 +91,7 @@ const Seasson5 = () => {
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
           
-          <Card title="Day 2 | 2nd Show" dateis="9th November 2024 | Saturday | 4:00pm to 5:00pm" onOpen={openModel} showid="shw4" showprice="599" />
+          <Card title="Day 2 | Single Show" dateis="9th November 2024 | Saturday | 6:00pm to 6:30pm" onOpen={openModel} showid="shw4" showprice="599" />
             {/* Card code block end */}
    
                 {/* inner ends */}
@@ -102,7 +102,7 @@ const Seasson5 = () => {
              
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
-            <Card title="Day 2 | 3rd Show" dateis="9th November 2024 | Saturday | 6:00pm to 6:30pm" onOpen={openModel }  showid="shw5" showprice="599" />
+            <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 7:00pm to 8:00pm" onOpen={openModel }  showid="shw5" showprice="599" />
          
             {/* Card code block end */}
    
@@ -115,7 +115,7 @@ const Seasson5 = () => {
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
             
-            <Card title="Day 2 | 4th Show" dateis="9th November 2024 | Saturday | 7:00pm to 7:30pm" onOpen={openModel} showid="shw6" showprice="599" />
+            <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 8:00pm to 9:00pm" onOpen={openModel} showid="shw6" showprice="599" />
             {/* Card code block end */}
    
                 {/* inner ends */}
@@ -125,7 +125,7 @@ const Seasson5 = () => {
                 {/* inner starts */}
              
           
-                <Card title="Day 2 | 5th Show" dateis="9th November 2024 | Saturday | 8:00pm to 8:30pm" onOpen={openModel } showid="shw7" showprice="599" />
+                <Card title="Day 2 | Grand Finale" dateis="9th November 2024 | Saturday | 10:00pm" onOpen={openModel } showid="shw7" showprice="1499" />
    
                 {/* inner ends */}
                 </div>
@@ -134,7 +134,7 @@ const Seasson5 = () => {
              
          
            
-           <Card title="Day 2 | Grand Finale" dateis="9th November 2024 | Saturday | 9:30pm to 10:30pm" onOpen={openModel} showid="shw8" showprice="999"  />
+           <Card title="General Pass | Whole Event" dateis="8th-9th November 2024 | All Day" onOpen={openModel} showid="shw8" showprice="3999"  />
    
                 {/* inner ends */}
                 </div>
@@ -142,7 +142,7 @@ const Seasson5 = () => {
                 {/* inner starts */}
              
            
-           <Card title="VIP Pass | Whole Event" dateis="9th November 2024 | All Day" onOpen={openModel}  showid="shw9" showprice="19999" />
+           <Card title="VIP Pass | Whole Event" dateis="9th November 2024 | All Day" onOpen={openModel}  showid="shw9" showprice="14999" />
           
    
                 {/* inner ends */}
