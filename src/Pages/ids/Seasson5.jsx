@@ -115,7 +115,7 @@ const Seasson5 = () => {
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
             
-            <Card title="Day 2 | 4th Show" dateis="9th November 2024 | Saturday | 7:00pm to 7:30pm" onOpen={openModel} showid="shw6" showprice="1" />
+            <Card title="Day 2 | 4th Show" dateis="9th November 2024 | Saturday | 7:00pm to 7:30pm" onOpen={openModel} showid="shw6" showprice="599" />
             {/* Card code block end */}
    
                 {/* inner ends */}
