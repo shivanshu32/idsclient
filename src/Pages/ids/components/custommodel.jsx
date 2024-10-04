@@ -214,13 +214,7 @@ const validationSchema = Yup.object().shape({
        onSubmit= {async(values, { resetForm, setSubmitting }) => {
         values.showid = props.showid
         values.quantity = quantity
-        if(values.email == "shivanshu@Abscod.com"){
-          values.price = "1"
-        }
-        else {
-          values.price = props.showprice
-        }
-        
+        values.price = props.showprice
         proceedClick()
 
 
