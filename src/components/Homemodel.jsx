@@ -45,8 +45,8 @@ export default function Index() {
               </svg>
 
                 {/* third epass starts */}
-                <div className="mx-auto   flex justify-center items-center flex-col" >
-                <div className="flex justify-start bg-gray-50 items-stretch flex-row" >
+                <div className="mx-auto   flex justify-center items-center flex-col " >
+                <div className="flex justify-start bg-gray-50 items-stretch flex-row border" >
                     <div className="flex items-center bg-black justify-end border-r border-dashed">
                         <p className="hidden lg:block transform flex  flex-shrink-0 -rotate-90 text-6xl font-semibold  text-yellow-500">#IDS</p>
 
