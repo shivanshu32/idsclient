@@ -107,7 +107,7 @@ export default function Index() {
                   <img
                     src={logo}
                     alt="menu"
-                    className="xs:w-[120px] lg:w-[200px]  object-contain cursor-pointer  "
+                    className="xs:w-[120px] sm:w-[120px] md:w-[120px]  lg:w-[200px]  object-contain cursor-pointer  "
                   />
                 </div>
                 {/* logo ends */}
