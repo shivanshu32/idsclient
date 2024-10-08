@@ -74,20 +74,32 @@ export default function Index() {
             <img
               src={logo}
               alt
-              className="w-48"
+              className="w-24 lg:hidden md:hidden block"
+            />
+
+            <img
+              src={logo}
+              alt
+              className="w-32 lg:hidden md:block hidden"
+            />
+
+<img
+              src={logo}
+              alt
+              className="w-48 lg:block md:hidden hidden"
             />
               
-              <p className="text-white text-2xl font-semibold">
+              <p className="text-white text-lg md:text-2xl lg:text-2xl font-semibold">
                SEASON 5
               </p>
-              <p className="text-white text-xl pt-4">
+              <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
                 8th - 9th November 2024
               </p>
-              <p className="text-white text-xl pt-4">
+              <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
                 Major Dhyanchand National Stadium, India Gate, Delhi
               </p>
               <Link to="/ids/season5">
-              <button className="font-medium lg:max-w-[337px] md:max-w-[320px] max-w-[300px] w-full border bg-white py-3 mt-4 hover:bg-gray-100 transform duration-300 ease-in-out">
+              <button className="font-medium lg:max-w-[337px] md:max-w-[320px] max-w-[200px] w-full border bg-white py-3 mt-4 hover:bg-gray-100 transform duration-300 ease-in-out">
                Grab Your Passes
               </button>
               </Link>
