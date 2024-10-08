@@ -8,6 +8,7 @@ import { instaData, ytSrc } from "./Data.js/Img";
 import apiurl from "../util";
 import Ids5cta from "./ids/components/ids5cta"
 import Homemodel from "../components/Homemodel"
+import Homemodelnew from "../components/Homemodelnew"
 
 import { Link } from "react-router-dom";
 import VideoComponent from "./../components/Components";
@@ -201,7 +202,9 @@ const Home = () => {
       
       </div>
 
-      <Homemodel />
+    {/* <Homemodel /> */}
+
+    <Homemodelnew />
     
     </>
   );
