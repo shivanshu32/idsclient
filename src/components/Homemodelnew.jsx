@@ -6,7 +6,7 @@ const onTopStyle = {
     position: 'fixed',
     width: '100%', 
     height: '100%', 
-    top: '8%',
+    top: '20%',
     left: '0',
     right: '0',
     bottom: '0',
@@ -20,7 +20,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="px-4" style={onTopStyle} >
+      <div className="px-4 h-full" style={onTopStyle} >
         {/* <div 
           className={`${
             show ? "hidden" : "flex"
@@ -53,28 +53,28 @@ export default function Index() {
               />
             </svg>
           </div>
-          <div className="relative w-full mx-auto">
+          <div className="relative h-96 w-full mx-auto">
             <img
               src={passback}
               alt
-              className=" lg:block md:hidden hidden w-full"
+              className=" lg:block md:hidden hidden w-full h-full object-contain"
             />
             <img
               src={passback}
               alt
-              className="lg:hidden md:block hidden w-full"
+              className="lg:hidden md:block hidden w-full h-full object-contain"
             />
             <img
               src={passback}
               alt
-              className=" lg:hidden md:hidden block w-full"
+              className=" lg:hidden md:hidden block w-full h-full object-contain"
             />
             <div className="absolute lg:bottom-20 lg:left-6 md:bottom-6 md:left-4 bottom-4 left-0 w-full px-4">
               
             <img
               src={logo}
               alt
-              className="w-24 lg:hidden md:hidden block"
+              className="w-24 block lg:hidden md:hidden"
             />
 
             <img
