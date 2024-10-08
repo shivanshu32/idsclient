@@ -119,11 +119,11 @@ export default function Ticket(props) {
 <div className="flex items-center justify-center">
     <button onClick={()=>{
       exportAsImage(qrCodeRef,"IDSpass.png")
-    }} className="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-16 py-4 text-xl">Download Below Pass</button>
+    }} className="mx-2 my-2 bg-gray-100   duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-16 py-4 text-xl">Download Below Pass</button>
 </div>
     
                 {/* third epass starts */}
-                <div className="mx-auto border  flex justify-center items-center flex-col" >
+                <div className="mx-auto border transform  flex justify-center items-center flex-col" >
                 <div className="flex justify-between bg-gray-50 items-stretch flex-row" ref={qrCodeRef}>
                     <div className="flex items-center bg-black justify-end border border-dashed">
                         <p className="hidden lg:block transform flex  flex-shrink-0 -rotate-90 text-3xl font-semibold  text-yellow-500">ENTRY FOR 1</p>
