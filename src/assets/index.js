@@ -17,6 +17,7 @@ import genx1 from "./Genx1.mp4";
 import error from "./Error.png";
 import logo from "./logo.png";
 import passback from "./passback.jpeg"
+import passbacksquare from "./passbackSquare.jpeg"
 import curve from "./curve.png";
 import check from "./check.png";
 import brandp from "./brandp.webp";
@@ -65,5 +66,6 @@ export {
   lokesh,
   passback,
   Sonakshipic,
-  Sehnaaz
+  Sehnaaz,
+  passbacksquare
 };

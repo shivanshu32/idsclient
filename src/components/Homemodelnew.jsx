@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { logo, passback } from "../assets/index";
+import { logo, passback , passbacksquare} from "../assets/index";
 import { Link } from "react-router-dom";
 
 const onTopStyle = {
@@ -20,7 +20,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="px-4 h-full" style={onTopStyle} >
+      <div className="h-full" style={onTopStyle} >
         {/* <div 
           className={`${
             show ? "hidden" : "flex"
@@ -34,7 +34,7 @@ export default function Index() {
           </button>
         </div> */}
         <div
-          className={`${  show ? "flex" : "hidden" } lg:max-w-[1200px] md:max-w-[744px] max-w-[375px] justify-center mx-auto bg-[#4C4C4C]    relative`}
+          className={`${  show ? "flex" : "hidden" }  w-auto justify-center mx-auto bg-[#4C4C4C]    relative`}
         >
           <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center bg-white cursor-pointer absolute right-10 top-8 z-10">
             <svg
@@ -53,19 +53,19 @@ export default function Index() {
               />
             </svg>
           </div>
-          <div className="relative h-96 w-full mx-auto">
+          <div className="relative  mx-auto">
             <img
-              src={passback}
+              src={passbacksquare}
               alt
-              className=" lg:block md:hidden hidden w-full h-full object-contain"
+              className=" lg:block md:hidden hidden w-full  object-contain"
             />
             <img
-              src={passback}
+              src={passbacksquare}
               alt
               className="lg:hidden md:block hidden w-full h-full object-contain"
             />
             <img
-              src={passback}
+              src={passbacksquare}
               alt
               className=" lg:hidden md:hidden block w-full h-full object-contain"
             />
