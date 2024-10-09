@@ -48,11 +48,11 @@ export default function Index() {
         <div
           className={`${  show ? "flex" : "hidden" }  w-auto justify-center mx-auto bg-[#4C4C4C]    relative`}
         >
-          <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center bg-white cursor-pointer absolute right-10 top-8 z-10">
+          <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center  cursor-pointer absolute right-10 top-8 z-10">
             <svg
               onClick={() => setshow_modal_XIII(false)}
-              width={24}
-              height={24}
+              width={48}
+              height={48}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export default function Index() {
               className="w-48 lg:block md:hidden hidden"
             />
               
-              <p className="text-white text-lg md:text-2xl lg:text-2xl font-semibold">
+              <p className="text-white text-lg md:text-2xl text-secondary lg:text-2xl font-semibold">
                SEASON 5
               </p>
               <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
@@ -129,11 +129,11 @@ export default function Index() {
         <div
           className={`${  show ? "flex" : "hidden" } lg:max-w-[500px] md:max-w-[744px] max-w-[375px] justify-center mx-auto bg-[#4C4C4C]   p relative`}
         >
-          <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center bg-white cursor-pointer absolute right-10 top-12 z-10">
+          <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center  cursor-pointer absolute right-10 top-12 z-10">
             <svg
               onClick={() => setshow_modal_XIII(false)}
-              width={24}
-              height={24}
+              width={48}
+              height={48}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@ export default function Index() {
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M7.28033 6.21967C6.98744 5.92678 6.51256 5.92678 6.21967 6.21967C5.92678 6.51256 5.92678 6.98744 6.21967 7.28033L10.9393 12L6.21967 16.7197C5.92678 17.0126 5.92678 17.4874 6.21967 17.7803C6.51256 18.0732 6.98744 18.0732 7.28033 17.7803L12 13.0607L16.7197 17.7803C17.0126 18.0732 17.4874 18.0732 17.7803 17.7803C18.0732 17.4874 18.0732 17.0126 17.7803 16.7197L13.0607 12L17.7803 7.28033C18.0732 6.98744 18.0732 6.51256 17.7803 6.21967C17.4874 5.92678 17.0126 5.92678 16.7197 6.21967L12 10.9393L7.28033 6.21967Z"
-                fill="#1F2937"
+                fill="#ffffff"
               />
             </svg>
           </div>
@@ -162,7 +162,7 @@ export default function Index() {
               alt
               className=" lg:hidden md:hidden block w-full"
             />
-             <div className="absolute lg:bottom-10 md:bottom-6 bottom-4 left-0 w-full px-4">
+             <div className="absolute lg:bottom-20 md:bottom-20 bottom-20  w-full px-4">
             
             <div className="flex flex-col items-center justify-between">
             <img
@@ -183,7 +183,7 @@ export default function Index() {
               className="w-48 lg:block md:hidden hidden"
             />
               
-              <p className="text-white text-lg md:text-2xl lg:text-2xl font-semibold">
+              <p className=" text-lg md:text-2xl lg:text-2xl text-secondary font-semibold">
                SEASON 5
               </p>
               <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
