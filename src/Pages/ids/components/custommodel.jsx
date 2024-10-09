@@ -145,7 +145,7 @@ const validationSchema = Yup.object().shape({
         >
           <div className="lg:px-5 md:px-6 px-4 py-5">
             <div className="md:flex block justify-center">
-              <div className="bg-white flex justify-end items-center h-[50px] px-4 w-full md:hidden block">
+              <div className="bg-black flex justify-end items-center h-[50px] px-4 w-full md:hidden block">
                 <svg
                   onClick={closeClick}
                   className="md:hidden block cursor-pointer z-10"
@@ -159,11 +159,11 @@ const validationSchema = Yup.object().shape({
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M7.28033 6.21967C6.98744 5.92678 6.51256 5.92678 6.21967 6.21967C5.92678 6.51256 5.92678 6.98744 6.21967 7.28033L10.9393 12L6.21967 16.7197C5.92678 17.0126 5.92678 17.4874 6.21967 17.7803C6.51256 18.0732 6.98744 18.0732 7.28033 17.7803L12 13.0607L16.7197 17.7803C17.0126 18.0732 17.4874 18.0732 17.7803 17.7803C18.0732 17.4874 18.0732 17.0126 17.7803 16.7197L13.0607 12L17.7803 7.28033C18.0732 6.98744 18.0732 6.51256 17.7803 6.21967C17.4874 5.92678 17.0126 5.92678 16.7197 6.21967L12 10.9393L7.28033 6.21967Z"
-                    fill="#1F2937"
+                    fill="#ffffff"
                   />
                 </svg>
               </div>
-              <div className="bg-black border text-white text-center flex flex-col justify-center items-center lg:px-[20px] md:px-[50px] lg:max-w-[405px] max-w-[343px] w-full sm:py-4 md:py-0 md:py-32">
+              <div className="bg-black md:border lg:border text-white text-center flex flex-col justify-center items-center lg:px-[20px] md:px-[50px] lg:max-w-[405px] max-w-[343px] w-full sm:py-4 md:py-0 md:py-32">
               <p className="lg:text-3xl md:text-3xl text-3xl pb-4 font-semibold">
                   Secure Your Spot
                 </p>

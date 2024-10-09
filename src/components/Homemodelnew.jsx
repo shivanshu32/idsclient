@@ -102,7 +102,7 @@ export default function Index() {
               className="w-48 lg:block md:hidden hidden"
             />
               
-              <p className="text-white text-lg md:text-2xl text-secondary lg:text-2xl font-semibold">
+              <p className=" text-lg md:text-2xl text-secondary lg:text-2xl font-semibold">
                SEASON 5
               </p>
               <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
