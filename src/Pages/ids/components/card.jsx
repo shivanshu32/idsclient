@@ -222,11 +222,11 @@ else
 
 
             {/* new card starts */}
-            <div className="flex justify-center h-80 py-4  sm:px-6 border">
+            <div className="flex justify-center h-80  border">
                 <div className="max-w-sm rounded overflow-hidden relative">
-                    <img className="h-full  opacity-70" src={props.backg} alt srcSet />
+                    <img className="h-full  opacity-40" src={props.backg} alt srcSet />
                     
-                    <div className="absolute bottom-0 left-0 right-0  ">
+                    <div className="absolute py-4  sm:px-6 bottom-0 left-0 right-0  ">
                         
 
                         <div className="flex lg:items-center items-start flex-col lg:flex-row pb-2 mt-4 w-full">
