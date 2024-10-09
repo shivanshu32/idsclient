@@ -8,6 +8,27 @@ import { passgoldback } from '../../../assets'
 export default function Card(props) {
 //const [show, setshow_modal_XII] = useState(false);
 
+let detailsis1 = ""
+let detailsis2 = ""
+let detailsis3 = ""
+
+if (props.showprice == "14999")
+{
+   detailsis1 = `✨ Front Row VIP Seats!`
+   detailsis2 = `✨ VIP Lounge Access `
+   detailsis3 = `✨ Unlimited Food & Drinks`
+
+}
+else
+{
+   detailsis1 = `✨ Unlock the ultimate experience!`
+   detailsis2 = `✨ Enjoy premium access to event `
+   detailsis3 = `✨ Terms & Conditions Applicable`
+}
+
+
+
+
   return (
    <>
      {/* Card code block start */}
@@ -209,13 +230,13 @@ export default function Card(props) {
                         
 
                         <div className="flex lg:items-center items-start flex-col lg:flex-row pb-2 mt-4 w-full">
-                        <span className="mr-1 text-gray-600 dark:text-gray-400">
+                        {/* <span className="mr-1 text-gray-600 dark:text-gray-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" />
                                         <circle cx={12} cy={11} r={3} />
                                         <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
                                     </svg>
-                                </span>
+                                </span> */}
                                 <p className="text-lg leading-6 text-white sm:w-11/12">{props.title}</p>
 
 
@@ -246,23 +267,29 @@ export default function Card(props) {
                         <p className="text-md leading-6 mt-8 text-white ">{props.dateis}</p>
                         <p className="mb-2 mt-2 w-full mt-8 font-normal text-white  text-sm tracking-normal ">
                     
-                        ✨Unlock the ultimate experience! <br /> 
+                        {/* ✨Unlock the ultimate experience! <br /> 
 ✨ Enjoy premium access to event <br />
-✨ Terms & Conditions Applicable 
+✨ Terms & Conditions Applicable  */}
+
+{ detailsis1 }
+<br />
+{ detailsis2 }
+<br />
+{ detailsis3 }
 
 {/* Don’t miss out on this once-in-a-lifetime opportunity! <br /> <br />
 Get your pass now and step into the world of high fashion! */}
                         </p>
                         <div className="mt-5 flex items-center">
                         <div className="flex lg:items-center items-start flex-col lg:flex-row pb-2 mt-4 w-full">
-                        <span className="mr-1 text-gray-600 dark:text-gray-400">
+                        <span className="mr-1 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" />
                                         <circle cx={12} cy={11} r={3} />
                                         <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
                                     </svg>
                                 </span>
-                                <p className="text-white   text-xs tracking-normal font-normal text-center">Major Dhyan Chand Stadium</p>
+                                <p className="text-white text-xs tracking-normal font-normal text-center">Major Dhyan Chand Stadium</p>
 
 
                                 
@@ -291,13 +318,13 @@ Get your pass now and step into the world of high fashion! */}
 
                         <div className="flex items-center xl:mt-0 mt-4">
                 
-                            <button onClick={() => props.onOpen(props.title,props.dateis, props.showprice, props.showid)} className="bg-indigo-500 text-sm text-white ml-3 px-4 py-2 flex items-center">
+                            <button onClick={() => props.onOpen(props.title,props.dateis, props.showprice, props.showid)} className="bg-orange-300 text-sm text-black ml-3 px-4 py-2 flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14" fill="none">
-                                    <circle cx="5.25033" cy="4.08333" r="2.33333" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M1.75 12.25V11.0833C1.75 9.79467 2.79467 8.75 4.08333 8.75H6.41667C7.70533 8.75 8.75 9.79467 8.75 11.0833V12.25" stroke="white" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
+                                    <circle cx="5.25033" cy="4.08333" r="2.33333" stroke="black" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M1.75 12.25V11.0833C1.75 9.79467 2.79467 8.75 4.08333 8.75H6.41667C7.70533 8.75 8.75 9.79467 8.75 11.0833V12.25" stroke="black" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     <path
                                         d="M9.33301 6.04166C9.1259 6.04166 8.95801 6.20956 8.95801 6.41666C8.95801 6.62377 9.1259 6.79166 9.33301 6.79166V6.04166ZM12.833 6.79166C13.0401 6.79166 13.208 6.62377 13.208 6.41666C13.208 6.20956 13.0401 6.04166 12.833 6.04166V6.79166ZM11.458 4.66666C11.458 4.45956 11.2901 4.29166 11.083 4.29166C10.8759 4.29166 10.708 4.45956 10.708 4.66666H11.458ZM10.708 8.16666C10.708 8.37377 10.8759 8.54166 11.083 8.54166C11.2901 8.54166 11.458 8.37377 11.458 8.16666H10.708ZM9.33301 6.79166H12.833V6.04166H9.33301V6.79166ZM10.708 4.66666V8.16666H11.458V4.66666H10.708Z"
-                                        fill="white"
+                                        fill="black"
                                     />
                                 </svg>
                                 <span className="ml-2">Reservation</span>
