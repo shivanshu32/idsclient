@@ -37,7 +37,7 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
 
   const unmuteVideo = (video) => {
     if (video) {
-      video.muted = false;
+      video.muted = true;
     }
   };
 
@@ -60,21 +60,21 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
       if (isDesktop) {
         if (desktopVideo) {
           playVideo(desktopVideo);
-          unmuteVideo(desktopVideo);
+          muteVideo(desktopVideo);
           pauseVideo(tabletVideo);
           pauseVideo(mobileVideo);
         }
       } else if (isTablet) {
         if (tabletVideo) {
           playVideo(tabletVideo);
-          unmuteVideo(tabletVideo);
+          muteVideo(tabletVideo);
           pauseVideo(desktopVideo);
           pauseVideo(mobileVideo);
         }
       } else {
         if (mobileVideo) {
           playVideo(mobileVideo);
-          unmuteVideo(mobileVideo);
+          muteVideo(mobileVideo);
           pauseVideo(desktopVideo);
           pauseVideo(tabletVideo);
         }
@@ -96,7 +96,7 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
         const video = entry.target;
         if (entry.isIntersecting) {
           playVideo(video);
-          unmuteVideo(video);
+          muteVideo(video);
         } else {
           pauseVideo(video);
           muteVideo(video);
@@ -133,7 +133,7 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
         if (desktopVideo) {
           if (hasInteracted) {
             playVideo(desktopVideo);
-            unmuteVideo(desktopVideo);
+            muteVideo(desktopVideo);
             pauseVideo(tabletVideo);
             pauseVideo(mobileVideo);
           }
@@ -142,7 +142,7 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
         if (tabletVideo) {
           if (hasInteracted) {
             playVideo(tabletVideo);
-            unmuteVideo(tabletVideo);
+            muteVideo(tabletVideo);
             pauseVideo(desktopVideo);
             pauseVideo(mobileVideo);
           }
@@ -151,7 +151,7 @@ const VideoComponent = ({ deskvid, tabvid, mobvid }) => {
         if (mobileVideo) {
           if (hasInteracted) {
             playVideo(mobileVideo);
-            unmuteVideo(mobileVideo);
+            muteVideo(mobileVideo);
             pauseVideo(desktopVideo);
             pauseVideo(tabletVideo);
           }
