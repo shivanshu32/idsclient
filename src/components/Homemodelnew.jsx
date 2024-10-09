@@ -17,14 +17,13 @@ const onTopStyle = {
 
   const onTopStyle1 = {
     position: 'fixed',
-    width: '100', 
-    height: '100', 
+   
     top: '10%',
     left: '0',
     right: '0',
     bottom: '0',
     //backgroundColor: 'rgba(0,0,0,0.8)', /* Black background with opacity */
-    zIndex: '200', /* Specify a stack order in case you're using a different order for other elements */
+    zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
     cursor: 'pointer' /* Add a pointer on hover */
   }
 
@@ -128,7 +127,7 @@ export default function Index() {
       <div className="">
         
         <div
-          className={`${  show ? "flex" : "hidden" } lg:max-w-[1200px] md:max-w-[744px] max-w-[375px] justify-center mx-auto bg-[#4C4C4C]   p relative`}
+          className={`${  show ? "flex" : "hidden" } lg:max-w-[500px] md:max-w-[744px] max-w-[375px] justify-center mx-auto bg-[#4C4C4C]   p relative`}
         >
           <div className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex justify-center items-center bg-white cursor-pointer absolute right-10 top-12 z-10">
             <svg
@@ -149,9 +148,9 @@ export default function Index() {
           </div>
           <div className="relative w-full mx-auto">
             <img
-              src={passback}
+              src={passbacksquare}
               alt
-              className=" lg:block md:hidden hidden object-contain w-full"
+              className=" lg:block md:hidden hidden object-fill w-full"
             />
             <img
               src={passback}
@@ -163,7 +162,7 @@ export default function Index() {
               alt
               className=" lg:hidden md:hidden block w-full"
             />
-             <div className="absolute lg:bottom-20 lg:left-6 md:bottom-6 md:left-4 bottom-4 left-0 w-full px-4">
+             <div className="absolute lg:bottom-10 md:bottom-6 bottom-4 left-0 w-full px-4">
             
             <div className="flex flex-col items-center justify-between">
             <img
