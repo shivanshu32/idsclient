@@ -11,7 +11,7 @@ const onTopStyle = {
     right: '0',
     bottom: '0',
     //backgroundColor: 'rgba(0,0,0,0.8)', /* Black background with opacity */
-    zIndex: '200', /* Specify a stack order in case you're using a different order for other elements */
+    zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
     cursor: 'pointer' /* Add a pointer on hover */
   }
 

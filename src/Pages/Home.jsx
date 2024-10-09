@@ -55,7 +55,7 @@ const Home = () => {
         </span>
         <div className="w-full">
 
-        {/* <Ids5cta />  */}
+        <Ids5cta /> 
         </div>
         <span>
           <span className="text-white md:text-center sm:text-center text-start ">
