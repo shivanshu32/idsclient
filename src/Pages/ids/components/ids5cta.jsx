@@ -15,7 +15,7 @@ const onTopStyle = {
 const Banner9 = () => {
     return (
         <div className=" sm:mx-auto w-full " >
-            <div className="flex w-full items-center justify-between bg-white md:flex-row flex-col  space-y-6 md:space-y-0 w-full">
+            <div className="flex w-full items-center justify-between bg-black md:flex-row flex-col  space-y-6 md:space-y-0 w-full">
                 <div className="hidden md:block">
                
                     <img src={tamanna} className="w-96" />
@@ -28,7 +28,7 @@ const Banner9 = () => {
                 <img src={logo} className="object-contain w-48 h-auto"/>
                     <div className="">
                         
-                        <h1 className="xl:text-4xl text-3xl font-semibold leading-9 text-gray-800">SEASON 5</h1>
+                        <h1 className="xl:text-4xl text-3xl font-semibold leading-9 text-secondary">SEASON 5</h1>
                     </div>
                     {/* <div className="mt-4">
                         <p className="xl:text-xl text-base leading-7 text-center text-gray-600">Register now and exprience hassle free experice at IDS 5</p>
@@ -104,7 +104,7 @@ const Banner9 = () => {
                       />
                     </svg>
                                     </span>
-                                <p className="text-2xl font-semibold leading-3 text-black ">
+                                <p className="text-2xl font-semibold leading-3 text-white ">
                                    
                               November 8th-9th 2024
                                 </p>  
@@ -121,12 +121,12 @@ const Banner9 = () => {
                                             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
                                         </svg>
                                     </span>
-                            <p className="text-xl  font-medium leading-3 text-black mt-6">Major Dhyan Chand Stadium, India Gate, New Delhi</p>
+                            <p className="text-xl  font-medium leading-3 text-white mt-6">Major Dhyan Chand Stadium, India Gate, New Delhi</p>
     </div> 
                 {/* location ends */}
 
                     <div className="mt-8 flex justify-center items-center w-full">
-                        <button className="hover:opacity-75 flex justify-center bg-gray-800 sm:w-1/2 w-full h-10 py-3">
+                        <button className="hover:opacity-75 flex justify-center bg-secondary sm:w-1/2 w-full h-10 py-3">
                         <Link to="/ids/season5">
                             <p className="text-base font-medium leading-none text-white mb-8">Grab Your Passes</p>
                         </Link>
