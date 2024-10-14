@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { logo, passback , passbacksquare} from "../assets/index";
+import { logo, passback , passbacksquare, logopop} from "../assets/index";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+import Homemodel from "./Homemodel"
 
 const onTopStyle = {
-    position: 'fixed',
+    position: 'absolute',
     width: '100%', 
     height: '100%', 
     top: '20%',
@@ -11,24 +13,62 @@ const onTopStyle = {
     right: '0',
     bottom: '0',
     //backgroundColor: 'rgba(0,0,0,0.8)', /* Black background with opacity */
-    zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
+   // zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
     cursor: 'pointer' /* Add a pointer on hover */
   }
 
   const onTopStyle1 = {
-    position: 'fixed',
+    position: 'absolute',
    
     top: '10%',
     left: '0',
     right: '0',
     bottom: '0',
     //backgroundColor: 'rgba(0,0,0,0.8)', /* Black background with opacity */
-    zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
+   // zIndex: '1', /* Specify a stack order in case you're using a different order for other elements */
     cursor: 'pointer' /* Add a pointer on hover */
   }
 
 export default function Index() {
   const [show, setshow_modal_XIII] = useState(true);
+
+  // Swal.fire({
+    
+  //   width: 600,
+  //   height:600,
+  //   html: `
+  //    <img
+  //             src=${logopop}
+             
+             
+  //    />
+
+  //      <p className=" text-lg md:text-2xl lg:text-2xl text-secondary font-semibold">
+  //              SEASON 5
+  //             </p>
+  //             <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
+  //             8th - 9th November 2024
+  //             </p>
+  //             <p className="text-white text-md md:text-md lg:text-md pt-4">
+  //             Major Dhyanchand National Stadium, India Gate, Delhi
+  //             </p>
+  //             <Link to="/ids/season5">
+  //             <button className="font-medium  w-[200px] border bg-white py-3 mt-4 hover:bg-gray-100 transform duration-300 ease-in-out">
+  //             Grab Your Passess
+  //             </button>
+  //             </Link>
+   
+  // `,
+  //   padding: "3em",
+  //   color: "#ffffff",
+  //   background: `#fff url(${passbacksquare})`,
+  //   backdrop: `
+  //     rgba(0,0,123,0.4)
+  //     url("/images/nyan-cat.gif")
+  //     left top
+  //     object-contain
+  //   `
+  // });
 
   return (
     <>

@@ -7,6 +7,7 @@ import seFivedesk from "./seFivedesk.mp4";
 import passgoldback from "./passgoldback.png"
 import tripti from "./tripti.jpg"
 import tamanna from "./tamanna.jpg"
+import logopop from "./logoPOP.png"
 
 import seoneMo from "./seoneMo.mp4";
 import sefivemo from "./sefivemo.mp4";
@@ -72,5 +73,6 @@ export {
   passbacksquare,
   passgoldback,
   tripti,
-  tamanna
+  tamanna,
+  logopop
 };

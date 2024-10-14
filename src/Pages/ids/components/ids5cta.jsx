@@ -8,7 +8,7 @@ const onTopStyle = {
     height: '100%', 
     top: '30%',
     backgroundColor: 'rgba(0,0,0,0.8)', /* Black background with opacity */
-    zIndex: '200', /* Specify a stack order in case you're using a different order for other elements */
+   // zIndex: '200', /* Specify a stack order in case you're using a different order for other elements */
     cursor: 'pointer' /* Add a pointer on hover */
   }
 
@@ -126,11 +126,13 @@ const Banner9 = () => {
                 {/* location ends */}
 
                     <div className="mt-8 flex justify-center items-center w-full">
+                   
                         <button className="hover:opacity-75 flex justify-center bg-secondary sm:w-1/2 w-full h-10 py-3">
-                        <Link to="/ids/season5">
-                            <p className="text-base font-medium leading-none text-white mb-8">Grab Your Passes</p>
-                        </Link>
+                        <Link to="/ids/season5" className="z-200">
+                            <p className="text-base font-medium leading-none text-white mb-8 ">Grab Your Passes</p>
+                            </Link>
                         </button>
+                        
                     </div>
                   
                 </div>
