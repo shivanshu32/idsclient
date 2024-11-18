@@ -51,7 +51,8 @@ const validationSchema = Yup.object().shape({
 
   const proceedClick = async() => {
     if(firststep){
-      setStep(false)
+      //setStep(false)
+      alert("Thanks for Registration, We will send you information on your Email/Mobile Number")
     }
     else {
      
