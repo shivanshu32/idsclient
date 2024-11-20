@@ -69,88 +69,91 @@ const Seasson5 = () => {
    
                 {/* inner ends */}
                 </div>
+
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
+                {/* inner starts */}
+             
+           
+           <Card title="VIP Pass | Whole Event" dateis="21-22nd December 2024 | All Day" onOpen={openModel}  showid="shw9" showprice="14999"  backg={passgoldback} />
+          
+   
+                {/* inner ends */}
+                </div>
+
                 {/* Remove class [ h-24 ] when adding a card block */}
                 {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
                 {/* second inner starts  */}
               
             
-              {/* <Card title="Day 2 | 1st Show | Grand Opening " dateis="9th November 2024 | Saturday | 3:00pm to 4:00pm" onOpen={openModel} showid="shw2" showprice="599"  backg={passback} /> */}
+              <Card title="Day 2 | 1st Show | Grand Opening " dateis="22nd December 2024 | Sunday | 3:00pm to 4:00pm" onOpen={openModel} showid="shw2" showprice="599"  backg={passback} />
             
                 {/* second inner ends */}
-                {/* </div> */}
+                </div>
                 {/* Remove class [ h-24 ] when adding a card block */}
                 {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-                {/* <div className="rounded border-gray-300  dark:border-gray-700 " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700 " >
                      {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
            
-            {/* <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 4:00pm to 5:00pm" onOpen={openModel} showid="shw3" showprice="599"  backg={passback} /> */}
+            <Card title="Day 2 | 2D Show" dateis="22nd December 2024 | Sunday | 4:00pm to 5:00pm" onOpen={openModel} showid="shw3" showprice="599"  backg={passback} />
             {/* Card code block end */}
-                {/* </div> */}
+                </div>
 
-                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
                 {/* inner starts */}
              
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
           
-          {/* <Card title="Day 2 | Single Show" dateis="9th November 2024 | Saturday | 6:00pm to 6:30pm" onOpen={openModel} showid="shw4" showprice="599"  backg={passback} /> */}
+          <Card title="Day 2 | Single Show" dateis="22nd December 2024 | Sunday | 6:00pm to 6:30pm" onOpen={openModel} showid="shw4" showprice="599"  backg={passback} />
             {/* Card code block end */}
    
                 {/* inner ends */}
-                {/* </div> */}
+                </div>
 
-                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
                 {/* inner starts */}
              
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
-            {/* <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 7:00pm to 8:00pm" onOpen={openModel }  showid="shw5" showprice="599"  backg={passback} /> */}
+            <Card title="Day 2 | 2D Show" dateis="22nd December 2024 | Sunday | 7:00pm to 8:00pm" onOpen={openModel }  showid="shw5" showprice="599"  backg={passback} />
          
             {/* Card code block end */}
    
                 {/* inner ends */}
-                {/* </div> */}
+                </div>
 
-                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
                 {/* inner starts */}
              
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
             
-            {/* <Card title="Day 2 | 2D Show" dateis="9th November 2024 | Saturday | 8:00pm to 9:00pm" onOpen={openModel} showid="shw6" showprice="599"  backg={passback} /> */}
+            <Card title="Day 2 | 2D Show" dateis="22nd December 2024 | Sunday | 8:00pm to 9:00pm" onOpen={openModel} showid="shw6" showprice="599"  backg={passback} />
             {/* Card code block end */}
    
                 {/* inner ends */}
-                {/* </div> */}
+                </div>
 
-                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
+                <div className="rounded border-gray-300  dark:border-gray-700  " >
                 {/* inner starts */}
              
           
-                {/* <Card title="Day 2 | Grand Finale" dateis="9th November 2024 | Saturday | 10:00pm" onOpen={openModel } showid="shw7" showprice="1499"  backg={passback} /> */}
+                <Card title="Day 2 | Grand Finale" dateis="22nd December 2024 | Sunday | 10:00pm" onOpen={openModel } showid="shw7" showprice="1499"  backg={passback} />
    
                 {/* inner ends */}
-                {/* </div> */}
-                <div className="rounded border-gray-300  dark:border-gray-700  " >
+                </div>
+                {/* <div className="rounded border-gray-300  dark:border-gray-700  " > */}
                 {/* inner starts */}
              
          
            
-           <Card title="General Pass | Whole Event" dateis="22nd December 2024 | All Day" onOpen={openModel} showid="shw8" showprice="3999"  backg={passback}  />
+           {/* <Card title="General Pass | Whole Event" dateis="22nd December 2024 | All Day" onOpen={openModel} showid="shw8" showprice="3999"  backg={passback}  /> */}
    
                 {/* inner ends */}
-                </div>
-                <div className="rounded border-gray-300  dark:border-gray-700  " >
-                {/* inner starts */}
-             
-           
-           <Card title="VIP Pass | Whole Event" dateis="9th November 2024 | All Day" onOpen={openModel}  showid="shw9" showprice="14999"  backg={passgoldback} />
-          
-   
-                {/* inner ends */}
-                </div>
+                {/* </div> */}
+                
             </div>
     
     {/* test ends */}

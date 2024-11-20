@@ -146,7 +146,7 @@ export default function Index() {
                SEASON 5
               </p>
               <p className="text-white text-lg md:text-2xl lg:text-2xl pt-4">
-              8th - 9th November 2024
+              21st - 22nd December 2024
               </p>
               <p className="text-white text-md md:text-md lg:text-md pt-4">
               Major Dhyanchand National Stadium, India Gate, Delhi

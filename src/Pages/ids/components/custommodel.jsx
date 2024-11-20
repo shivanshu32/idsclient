@@ -52,15 +52,12 @@ const validationSchema = Yup.object().shape({
   const proceedClick = async() => {
     if(firststep){
       //setStep(false)
-      alert("Thanks for Registration, We will send you information on your Email/Mobile Number")
+     // alert("Thanks for Registration, We will send you information on your Email/Mobile Number")
     }
     else {
      
      
-        const finalprice = quantity * props.showprice
-
-    
-      
+      const finalprice = quantity * props.showprice
       const finalmerchanttxnid = merchanttxnid
 
       const data = {
