@@ -40,7 +40,10 @@ const validationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email Required'),
   phone: Yup.string().required('Please enter your phone number'),
   occupation: Yup.string().required('Please enter your occupation'),
+  instagramid: Yup.string().required('Please enter your Instagram ID'),
 })
+
+
 
 
   const [firststep, setStep] = useState(true);
@@ -206,7 +209,10 @@ const validationSchema = Yup.object().shape({
          name: '',
          phone: '',
          email: '',
-         occupation: ''
+         occupation: '',
+         instagramid: '',
+         resharelink: '',
+         followus: '',
        }}
        validationSchema={validationSchema}
        onSubmit= {async(values, { resetForm, setSubmitting }) => {
@@ -265,6 +271,43 @@ const validationSchema = Yup.object().shape({
            <Field name="occupation" placeholder="Occupation" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" type="text" />
            {errors.occupation && touched.occupation ? <div className="text-red-600 text-sm">{errors.occupation}</div> : null}
            </div>
+
+           <div className="pt-2 w-full">
+           <Field name="instagramid" placeholder="Instagram ID" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" type="text" />
+           {errors.occupation && touched.occupation ? <div className="text-red-600 text-sm">{errors.occupation}</div> : null}
+           </div>
+
+         
+           
+
+           <div className="pt-4 w-full">
+              <p className="text-base leading-none text-gray-800">Do You follow us on instagram?</p>
+              <div className="flex items-center gap-4 mt-6">
+                <div className="flex gap-3 items-center">
+                  <input
+                    type="radio"
+                    name="radio"
+                    className="w-4 h-4 accent-indigo-700 cursor-pointer"
+                  />
+                  <p className="text-sm leading-none text-gray-600">Yes</p>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <input
+                    type="radio"
+                    name="radio"
+                    className="w-4 h-4 accent-indigo-700 cursor-pointer"
+                  />
+                  <p className="text-sm leading-none text-gray-600">No</p>
+                </div>
+              </div>
+            </div>
+
+          <div className="pt-4 pb-2 w-full">
+           <Field name="resharelink" placeholder="Instagram Reshare Link" className="border border-gray-200 placeholder:text-gray-600 focus:outline-none lg:max-w-[405px] w-full px-4 py-3" type="text" />
+           {errors.occupation && touched.occupation ? <div className="text-red-600 text-sm">{errors.occupation}</div> : null}
+           </div>
+
+        <div class="text-red-600">  * You may get free VIP passes for IDS5 for resharing india designer show instagram post. </div>
 
            <button type="submit" className="bg-gray-800 font-medium text-white lg:max-w-[406px] w-full py-3 hover:bg-gray-700 duration-200  mt-4">Submit</button>
          </Form>

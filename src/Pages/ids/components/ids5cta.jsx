@@ -1,5 +1,5 @@
 import React from "react";
-import {logo, Sonakshipic, Sehnaaz, tripti, tamanna} from "../../../assets/index"
+import {logo, Sonakshipic, Sehnaaz} from "../../../assets/index"
 import { Link } from "react-router-dom"
 
 const onTopStyle = {
@@ -18,7 +18,7 @@ const Banner9 = () => {
             <div className="flex w-full items-center justify-between bg-black md:flex-row flex-col  space-y-6 md:space-y-0 w-full">
                 <div className="hidden md:block">
                
-                    <img src={tamanna} className="w-96" />
+                    {/* <img src={tamanna} className="w-96" /> */}
                     {/* <img className="hidden xl:block w-full" src="https://i.ibb.co/ZcSmVGf/behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1.png" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1" />
                     <img className="xl:hidden w-full" src="https://i.ibb.co/mBk8myg/behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1-1.png" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1-1" /> */}
                 </div>

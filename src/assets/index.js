@@ -5,8 +5,8 @@ import seVidfour from "./seVidfour.mp4";
 import seFourdesk from "./seFourdesk.mp4";
 import seFivedesk from "./seFivedesk.mp4";
 import passgoldback from "./passgoldback.png"
-import tripti from "./tripti.jpg"
-import tamanna from "./tamanna.jpg"
+// import tripti from "./tripti.jpg"
+// import tamanna from "./tamanna.jpg"
 import logopop from "./logoPOP.png"
 
 import seoneMo from "./seoneMo.mp4";
@@ -72,7 +72,5 @@ export {
   Sehnaaz,
   passbacksquare,
   passgoldback,
-  tripti,
-  tamanna,
   logopop
 };

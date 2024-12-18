@@ -1,6 +1,3 @@
-
-
-
 import designer from './designer.webp';
 import about from './about.webp';
 import social from './social.jpeg';

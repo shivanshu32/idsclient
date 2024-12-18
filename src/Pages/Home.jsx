@@ -55,7 +55,7 @@ const Home = () => {
         </span>
         <div className="w-full">
 
-        <Ids5cta /> 
+        {/* <Ids5cta />  */}
         </div>
         <span>
           <span className="text-white md:text-center sm:text-center text-start ">
@@ -109,7 +109,6 @@ const Home = () => {
                 src={viditem.vidsrc}
                 key={viditem.id}
                 title="India Designer Show"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
@@ -204,7 +203,7 @@ const Home = () => {
 
     {/* <Homemodel /> */}
 
-    <Homemodelnew />
+    {/* <Homemodelnew /> */}
     
     </>
   );

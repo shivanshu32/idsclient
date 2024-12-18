@@ -2,6 +2,35 @@ import React, { useEffect, useState } from "react";
 import seVidtwo from "../../assets/seVidtwo.mp4";
 import { setwoMo, setwovidtab } from "../../assets";
 
+import { 
+  s2one,
+  s2two,
+  s2three,
+  s2four,
+  s2five,
+  s2six,
+  s2seven,
+  s2eight,
+  s2nine,
+  s2ten,
+  s2eleven,
+  s2twelve ,
+  s2thirteen ,
+  s2fourteen ,
+  s2fifteen ,
+  s2sixteen ,
+  s2seventeen ,
+  s2eighteen ,
+  s2nineteen ,
+  s2twenty ,
+  s2twentyone ,
+  s2twentytwo ,
+  s2twentythree ,
+  s2twentyfour,
+ s2twentyfive
+ 
+   } from "../../assets/IDS/index"
+
 import apiurl from "../../util";
 
 import { gsap } from "gsap";
@@ -68,7 +97,7 @@ const Sesson2 = () => {
         Highlights
       </h1>
 
-      <span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+      {/* <span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
         {image?.map((data, index) => (
           <img
             key={index}
@@ -79,7 +108,162 @@ const Sesson2 = () => {
             onClick={() => openImageModal(index)}
           />
         ))}
-      </span>
+      </span> */}
+
+<span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+       
+       <img
+         loading="lazy"
+         src={s2one}
+         alt="img"
+         className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+       />
+
+       <img
+         loading="lazy"
+         src={s2two}
+         alt="img"
+         className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+       />
+
+       <img
+         loading="lazy"
+         src={s2three}
+         alt="img"
+         className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+       />
+    
+   </span>
+
+
+   <span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+    
+    <img
+      loading="lazy"
+      src={s2four}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2five}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2six}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+ 
+</span>
+
+<span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+    
+    <img
+      loading="lazy"
+      src={s2seven}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2eight}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2nine}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+ 
+</span>
+
+<span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+    
+    <img
+      loading="lazy"
+      src={s2ten}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2eleven}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2twelve}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+ 
+</span>
+
+<span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+    
+    <img
+      loading="lazy"
+      src={s2thirteen}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2fourteen}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2fifteen}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+ 
+</span>
+
+<span className="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1 md:gap-3 gap-9 mt-5 md:px-16 px-6">
+    
+    <img
+      loading="lazy"
+      src={s2sixteen}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2four}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+
+    <img
+      loading="lazy"
+      src={s2eighteen}
+      alt="img"
+      className="w-[23rem] h-[20rem] rounded-2xl border-2  border-secondary object-cover "
+    />
+ 
+</span>
+
+
+
+
 
       {/* {selectedImageIndex !== null && (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80 z-50">
